@@ -7,7 +7,7 @@ This implementation is based on Sean McCullough's [port](https://gist.github.com
 
 Improvements over Sean's version are
 
-  - more idiomatic and [jshint](http://www.jshint.com/)-compliant code style
+  - more idiomatic, [jshint](http://www.jshint.com/)-compliant and [jsdoc-annotated](http://usejsdoc.org/) code
   - unit tested
   - compatible with [Node.js](http://nodejs.org/), [requirejs](http://requirejs.org/)  and browser environments
   - available as an [npm](https://npmjs.org/), [Jam](http://jamjs.org/) and [Bower](http://bower.io/) module
