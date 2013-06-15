@@ -8,7 +8,7 @@ Improvements over Sean's version are
 
   - more idiomatic, [jshint](http://www.jshint.com/)-compliant and [jsdoc](http://usejsdoc.org/)-annotated code
   - compatible with [Node.js](http://nodejs.org/), [requirejs](http://requirejs.org/)  and browser environments
-  - available as an [npm](https://npmjs.org/), [Jam](http://jamjs.org/) and [Bower](http://bower.io/) module
+  - available as an [npm](https://npmjs.org/), [Jam](http://jamjs.org/) and [Bower](http://bower.io/) module (*coming soon*)
   - (slightly) unit tested ;-)
  
 
