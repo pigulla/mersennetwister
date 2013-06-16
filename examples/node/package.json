@@ -4,6 +4,6 @@
     "private": true,
     "version": "0.0.1",
     "dependencies": {
-        "mersennetwister": "git://github.com/pigulla/mersennetwister.git"
+        "mersennetwister": "0.1.0"
     }
 }
