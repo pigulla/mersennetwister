@@ -7,8 +7,8 @@ Improvements over Sean's version are
 
   - more idiomatic, [jshint](http://www.jshint.com/)-compliant and [jsdoc](http://usejsdoc.org/)-annotated code
   - compatible with [Node.js](http://nodejs.org/), [requirejs](http://requirejs.org/)  and browser environments
-  - available as an [npm](https://npmjs.org/) package, [Jam](http://jamjs.org/) and [Bower](http://bower.io/) coming soon
-  - (slightly) unit tested ;-)
+  - available as a module for [npm](https://npmjs.org/), [Jam](http://jamjs.org/) and [Bower](http://bower.io/)
+  - (somewhat) unit tested ;-)
  
 Please note that the mersenne twister is [not cryptographically secure](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/efaq.html).
 
