@@ -1,4 +1,5 @@
-var MersenneTwister = require('../src/MersenneTwister'),
+// Don't forget to run "npm install"!
+var MersenneTwister = require('mersennetwister'),
     mt;
 
 // Instantiation
@@ -19,3 +20,8 @@ mt.seedArray([42, 23, 17]);
 
 // or you can just use the static "random" method as a drop-in replacement for Math.random
 MersenneTwister.random();
+
+console.log('Here are some random numbers:');
+for (var i = 0; i < 5; ++i) {
+    console.log(MersenneTwister.random());
+}
