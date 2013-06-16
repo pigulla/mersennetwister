@@ -12,18 +12,21 @@ Improvements over Sean's version are
  
 Please note that the mersenne twister is [not cryptographically secure](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/efaq.html).
 
-## Installation
+## Installation and setup
 #### Node.js
-Simply run `npm install mersennetwister` (or `npm install --save mersennetwister` of you want to directly add it to your package.json file).
+Simply run `npm install mersennetwister` (or `npm install --save mersennetwister` of you want to directly add it to your package.json file). Import as usual: `var MersenneTwister = require('mersennetwister');`
 
 #### Jam
-Use the Jam command line tool: `jam install mersennetwister`.
+Use the Jam command line tool: `jam install mersennetwister` and import as usual `require(['mersennetwister'], function (MersenneTwister) { ...`
 
 #### Bower
-Via the Bower tool: `bower install mersennetwister`.
+Via the Bower tool: `bower install mersennetwister`
 
-#### Browser
-Include the `src/MersenneTwister.js` file: `<script src="path/to/MersenneTwister.js">`. It is now available as the global variable `MersenneTwister`.
+#### requirejs
+If you use requirejs by itself (i.e., not in conjuction with a tool such as Jam) you need to import it via its camelcased filename: `requirejs(['MersenneTwister'], function (MersenneTwister) { ...` 
+
+#### Standalone
+Download and include the `src/MersenneTwister.js` file: `<script src="path/to/MersenneTwister.js"></script>`. It is now available as the global variable `MersenneTwister`.
 
 ## Usage
 You can either just use the static `random` method of the module, which will return a random float just like [`Math.random`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) does. If desired you can also instantiate your own instance of the mersenne twister and use its methods:
