@@ -3,6 +3,7 @@ require(['src/MersenneTwister'], function (MersenneTwister) {
 
     describe('MersenneTwister', function () {
         it('generates the expected numbers', function () {
+            // Expected values for a seed value of 1
             var expected = [
                 1791095845, 4282876139, 3093770124, 4005303368, 491263,
                 550290313, 1298508491, 4290846341, 630311759, 1013994432,

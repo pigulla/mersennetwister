@@ -22,15 +22,15 @@
         MAX_INT = 4294967296.0,
         N = 624,
         M = 397,
-        UPPER_MASK = 0x80000000, /* most significant w-r bits */
-        LOWER_MASK = 0x7fffffff, /* least significant r bits */
-        MATRIX_A = 0x9908b0df;   /* constant vector a */
+        UPPER_MASK = 0x80000000,
+        LOWER_MASK = 0x7fffffff,
+        MATRIX_A = 0x9908b0df;
 
     /**
      * Instantiates a new Mersenne Twister.
      *
      * @constructor
-     * @param {number} seed
+     * @param {number=} seed
      */
     MersenneTwister = function (seed) {
         if (typeof seed === 'undefined') {
@@ -40,7 +40,7 @@
         this.mt = new Array(N);
         this.mti = N + 1;
 
-        this.init(seed);
+        this.seed(seed);
     };
 
     /**
@@ -48,7 +48,7 @@
      *
      * @param {number} seed
      */
-    MersenneTwister.prototype.init = function (seed) {
+    MersenneTwister.prototype.seed = function (seed) {
         var s;
 
         this.mt[0] = seed >>> 0;
@@ -68,13 +68,13 @@
      *
      * @param {array} key
      */
-    MersenneTwister.prototype.initArray = function (key) {
+    MersenneTwister.prototype.seedArray = function (key) {
         var i = 1,
             j = 0,
             k = N > key.length ? N : key.length,
             s;
 
-        this.init(19650218);
+        this.seed(19650218);
 
         for (; k > 0; k--) {
             s = this.mt[i-1] ^ (this.mt[i-1] >>> 30);
@@ -120,7 +120,7 @@
 
         if (this.mti >= N) {
             if (this.mti === N + 1) {
-                this.init(5489);
+                this.seed(5489);
             }
 
             for (kk = 0; kk < N - M; kk++) {
@@ -196,10 +196,13 @@
         return (a * 67108864.0 + b) * (1.0 / 9007199254740992.0);
     };
 
-    var instance = new MersenneTwister();
-    MersenneTwister.random = function () {
-        return instance.rnd();
-    };
+    // For convenience, provide a static rnd() method like Math does.
+    (function () {
+        var instance = new MersenneTwister();
+        MersenneTwister.random = function () {
+            return instance.rnd();
+        };
+    })();
 
     return MersenneTwister;
 }));
