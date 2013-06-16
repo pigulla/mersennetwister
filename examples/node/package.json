@@ -4,6 +4,6 @@
     "private": true,
     "version": "0.0.1",
     "dependencies": {
-        "mersennetwister": "0.1.0"
+        "mersennetwister": "0.1.1"
     }
 }

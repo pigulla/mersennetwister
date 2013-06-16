@@ -17,6 +17,16 @@ module.exports = function (grunt) {
             }
         },
 
+        jsdoc : {
+            dist : {
+                src: ['src/**/*.js'],
+                options: {
+                    destination: 'doc',
+                    configure: 'jsdoc.json'
+                }
+            }
+        },
+
         jasmine: {
             test: {
                 src: 'src/MersenneTwister.js',
@@ -30,4 +40,5 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-jsdoc');
 };

@@ -9,8 +9,18 @@
         root.MersenneTwister = factory();
     }
 }(this, function () {
+    /**
+     * A standalone, pure JavaScript implementation of the Mersenne Twister pseudo random number generator. Compatible with
+     * Node.js, requirejs and browser environments. Packages are available for npm, Jam and Bower.
+     *
+     * @module MersenneTwister
+     * @author Raphael Pigulla <pigulla@four66.com>
+     * @license See the attached LICENSE file.
+     * @version 0.1.1
+     */
+
     /*
-     * Most comments were stripped from the source. If needed you can still find them in the original C source:
+     * Most comments were stripped from the source. If needed you can still find them in the original C code:
      * http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c
      *
      * The original port to JavaScript, on which this file is based, was done by Sean McCullough. It can be found at:
@@ -18,8 +28,7 @@
      */
     'use strict';
 
-    var MersenneTwister,
-        MAX_INT = 4294967296.0,
+    var MAX_INT = 4294967296.0,
         N = 624,
         M = 397,
         UPPER_MASK = 0x80000000,
@@ -30,9 +39,11 @@
      * Instantiates a new Mersenne Twister.
      *
      * @constructor
-     * @param {number=} seed
+     * @alias module:MersenneTwister
+     * @since 0.1.0
+     * @param {number=} seed The initial seed value.
      */
-    MersenneTwister = function (seed) {
+    var MersenneTwister = function (seed) {
         if (typeof seed === 'undefined') {
             seed = new Date().getTime();
         }
@@ -46,7 +57,8 @@
     /**
      * Initializes the state vector by using one unsigned 32-bit integer "seed", which may be zero.
      *
-     * @param {number} seed
+     * @since 0.1.0
+     * @param {number} seed The seed value.
      */
     MersenneTwister.prototype.seed = function (seed) {
         var s;
@@ -66,12 +78,13 @@
      * length is smaller than 624, then each array of 32-bit integers gives distinct initial state vector. This is
      * useful if you want a larger seed space than 32-bit word.
      *
-     * @param {array} key
+     * @since 0.1.0
+     * @param {array} vector The seed vector.
      */
-    MersenneTwister.prototype.seedArray = function (key) {
+    MersenneTwister.prototype.seedArray = function (vector) {
         var i = 1,
             j = 0,
-            k = N > key.length ? N : key.length,
+            k = N > vector.length ? N : vector.length,
             s;
 
         this.seed(19650218);
@@ -80,7 +93,7 @@
             s = this.mt[i-1] ^ (this.mt[i-1] >>> 30);
 
             this.mt[i] = (this.mt[i] ^ (((((s & 0xffff0000) >>> 16) * 1664525) << 16) + ((s & 0x0000ffff) * 1664525))) +
-                key[j] + j;
+                vector[j] + j;
             this.mt[i] >>>= 0;
             i++;
             j++;
@@ -88,7 +101,7 @@
                 this.mt[0] = this.mt[N - 1];
                 i = 1;
             }
-            if (j >= key.length) {
+            if (j >= vector.length) {
                 j = 0;
             }
         }
@@ -109,8 +122,9 @@
     };
 
     /**
-     * Generates an unsigned 32-bit integer.
+     * Generates a random unsigned 32-bit integer.
      *
+     * @since 0.1.0
      * @returns {number}
      */
     MersenneTwister.prototype.int = function () {
@@ -149,8 +163,9 @@
     };
 
     /**
-     * Generates an unsigned 31-bit integer.
+     * Generates a random unsigned 31-bit integer.
      *
+     * @since 0.1.0
      * @returns {number}
      */
     MersenneTwister.prototype.int31 = function () {
@@ -158,8 +173,9 @@
     };
 
     /**
-     * Generates uniform real in the interval [0;1] with 32-bit resolution.
+     * Generates a random real in the interval [0;1] with 32-bit resolution.
      *
+     * @since 0.1.0
      * @returns {number}
      */
     MersenneTwister.prototype.real = function () {
@@ -167,8 +183,9 @@
     };
 
     /**
-     * Generates a uniform real in the interval ]0;1[ with 32-bit resolution.
+     * Generates a random real in the interval ]0;1[ with 32-bit resolution.
      *
+     * @since 0.1.0
      * @returns {number}
      */
     MersenneTwister.prototype.realx = function () {
@@ -176,8 +193,9 @@
     };
 
     /**
-     * Generates a uniform real in the interval [0;1[ with 32-bit resolution.
+     * Generates a random real in the interval [0;1[ with 32-bit resolution.
      *
+     * @since 0.1.0
      * @returns {number}
      */
     MersenneTwister.prototype.rnd = function () {
@@ -185,8 +203,9 @@
     };
 
     /**
-     * Generates a uniform real in the interval [0;1[ with 53-bit resolution.
+     * Generates a random real in the interval [0;1[ with 53-bit resolution.
      *
+     * @since 0.1.0
      * @returns {number}
      */
     MersenneTwister.prototype.rndHiRes = function () {
@@ -196,13 +215,19 @@
         return (a * 67108864.0 + b) * (1.0 / 9007199254740992.0);
     };
 
-    // For convenience, provide a static rnd() method like Math does.
-    (function () {
-        var instance = new MersenneTwister();
-        MersenneTwister.random = function () {
-            return instance.rnd();
-        };
-    })();
+    var instance = new MersenneTwister();
+
+    /**
+     * A static version of [rnd]{@link module:MersenneTwister#rnd} on a randomly seeded instance.
+     *
+     * @static
+     * @function random
+     * @memberof module:MersenneTwister
+     * @returns {number}
+     */
+    MersenneTwister.random = function () {
+        return instance.rnd();
+    };
 
     return MersenneTwister;
 }));

@@ -1,6 +1,6 @@
 {
     "name": "mersennetwister",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "license": {
         "type": "Mersenne Twister",
         "url": "http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c"
@@ -17,10 +17,17 @@
         "random",
         "mersennetwister"
     ],
+    "categories": [
+        "Utilities"
+    ],
+    "jam": {
+        "main": "src/MersenneTwister.js"
+    },
     "devDependencies": {
         "grunt": "0.4.1",
         "grunt-contrib-jshint": "0.6.0",
         "grunt-contrib-jasmine": "0.5.0",
-        "grunt-template-jasmine-requirejs": "0.1.2"
+        "grunt-template-jasmine-requirejs": "0.1.2",
+        "grunt-jsdoc": "0.3.3"
     }
 }
