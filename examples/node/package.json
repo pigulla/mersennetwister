@@ -1,0 +1,9 @@
+{
+    "name": "mersennetwister-node-example",
+    "description": "MersenneTwister example for Node.js",
+    "private": true,
+    "version": "0.0.1",
+    "dependencies": {
+        "mersennetwister": "git://github.com/pigulla/mersennetwister.git"
+    }
+}
