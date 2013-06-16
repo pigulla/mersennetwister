@@ -6,11 +6,17 @@
         "url": "http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c"
     },
     "author": "Raphael Pigulla <pigulla@four66.com>",
+    "description": "A standalone, pure JavaScript implementation of the Mersenne Twister pseudo random number generator. Compatible with Node.js, requirejs and browser environments.",
     "main": "./src/MersenneTwister.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/pigulla/mersennetwister"
     },
+    "keywords": [
+        "rng",
+        "random",
+        "mersennetwister"
+    ],
     "devDependencies": {
         "grunt": "0.4.1",
         "grunt-contrib-jshint": "0.6.0",
