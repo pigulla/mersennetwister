@@ -52,6 +52,7 @@ As indicated [here](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elice
   - added installation instructions
   - completed jsdoc annotations and added build target
   - changelog added ;)
+
 ##### 0.1.0 (06/16/2013)
   - initial release
   - published as an npm [module](https://npmjs.org/package/mersennetwister)
