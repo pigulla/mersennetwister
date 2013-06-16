@@ -22,6 +22,9 @@ Use the Jam command line tool: `jam install mersennetwister`.
 #### Bower
 Via the Bower tool: `bower install mersennetwister`.
 
+#### Browser
+Include the `src/MersenneTwister.js` file: `<script src="path/to/MersenneTwister.js">`. It is now available as the global variable `MersenneTwister`.
+
 ## Usage
 You can either just use the static `random` method of the module, which will return a random float just like [`Math.random`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) does. If desired you can also instantiate your own instance of the mersenne twister and use its methods:
 
