@@ -23,7 +23,7 @@ Use the Jam command line tool: `jam install mersennetwister` and import as usual
 Via the Bower tool: `bower install mersennetwister`
 
 #### requirejs
-If you use requirejs by itself (i.e., not in conjuction with a tool such as Jam) you need to import it via its camelcased filename: `requirejs(['MersenneTwister'], function (MersenneTwister) { ...` 
+Tools like Jam will usually configure requirejs so that it can be accessed via its package name (i.e., `mersennetwister`). If you use requirejs without such a customized configuration you need to import it via its camelcased filename: `requirejs(['MersenneTwister'], function (MersenneTwister) { ...` 
 
 #### Standalone
 Download and include the `src/MersenneTwister.js` file: `<script src="path/to/MersenneTwister.js"></script>`. It is now available as the global variable `MersenneTwister`.
