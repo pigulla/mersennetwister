@@ -52,7 +52,7 @@ Take a look at the inventor´s [website](http://www.math.sci.hiroshima-u.ac.jp/~
 As indicated [here](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elicense.html), the Mersenne Twister algorithm is free to be used for any purpose, inclusing commercial use. The license file of this module contains the text found in the [C implementation](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c) on which it is based.
 
 ## Changelog
-##### 0.1.1 (??/??/2013)
+##### 0.1.1 (06/19/2013)
   - published as a Jam [module](http://jamjs.org/packages/#/details/mersennetwister)
   - registered as a [Bower](http://bower.io/) component
   - added installation instructions
