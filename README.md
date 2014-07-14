@@ -53,20 +53,19 @@ If you have some code that uses `Math.random()`, but you would like deterministi
 var randomBoolean = function (rng) // rng: *optional* random number generator
 {
     // Determine if a random number generator with .random() method was passed
+    // Subsequent rng.random() calls will be Math.random() if no rng was passed.
     if (rng === undefined || typeof rng.random !== 'function') rng = Math;
 
-    // Subsequent rng.random() calls will be Math.random() if no rng was passed.
-
-    return rng.random() >= 0.5;
+    return rng.random() >= 0.5;     // return random boolean value
 }
 
 var mt = new MersenneTwister(123);
-while (randomBoolean(mt))
+while (randomBoolean(mt))   // use seeded generator mt
 {
     console.log('this will be printed twice on every execution');
 }
 
-while (randomBoolean())
+while (randomBoolean())     // use Math.random()
 {
     console.log('nondeterministic');
 }
