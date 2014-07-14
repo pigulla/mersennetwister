@@ -47,12 +47,12 @@ mt.init(seed);      // (re)seed the generator with an unsigned 32-bit integer
 mt.initArray(key);  // (re)seed using a state vector of unsigned 32-bit integers
 ```
 
-If you have some code that uses `Math.random()`, but you would like deterministic control with a seeded `MersenneTwister` for debugging or otherwise, then you can rely on the `.random()` method like so:
+If you have some code that uses `Math.random()`, but you would like deterministic behavior, then you can rely on a seeded mersenne twister's `.random()` method. This is useful for debug code, synchronization, or anywhere else you need execution consistency:
 
 ```javascript
-var randomBoolean = function (rng) // rng: *optional* random number generator
+var randomBoolean = function (rng) // rng: an *optional* random number generator
 {
-    // Determine if a random number generator with .random() method was passed
+    // Determine if a random number generator with .random() method was passed.
     // Subsequent rng.random() calls will be Math.random() if no rng was passed.
     if (rng === undefined || typeof rng.random !== 'function') rng = Math;
 
@@ -65,9 +65,9 @@ while (randomBoolean(mt))   // use seeded generator mt
     console.log('this will be printed twice on every execution');
 }
 
-while (randomBoolean())     // use Math.random()
+while (randomBoolean())     // use default Math.random()
 {
-    console.log('nondeterministic');
+    console.log('nondeterministic execution');
 }
 ```
 
