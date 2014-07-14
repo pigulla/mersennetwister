@@ -47,30 +47,6 @@ mt.init(seed);      // (re)seed the generator with an unsigned 32-bit integer
 mt.initArray(key);  // (re)seed using a state vector of unsigned 32-bit integers
 ```
 
-If you have some code that uses `Math.random()`, but you would like deterministic behavior, then you can rely on a seeded mersenne twister's `.random()` method. This is useful for debug code, synchronization, or anywhere else you need execution consistency:
-
-```javascript
-var randomBoolean = function (rng) // rng: an *optional* random number generator
-{
-    // Determine if a random number generator with .random() method was passed.
-    // Subsequent rng.random() calls will be Math.random() if no rng was passed.
-    if (rng === undefined || typeof rng.random !== 'function') rng = Math;
-
-    return rng.random() >= 0.5;     // return random boolean value
-}
-
-var mt = new MersenneTwister(123);
-while (randomBoolean(mt))   // use seeded generator mt
-{
-    console.log('this will be printed twice on every execution');
-}
-
-while (randomBoolean())     // use default Math.random()
-{
-    console.log('nondeterministic execution');
-}
-```
-
 Take a look at the inventor´s [website](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html) if more detailed information is required.
 
 ## Licensing
@@ -78,7 +54,7 @@ As indicated [here](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elice
 
 ## Changelog
 ##### 0.2.0 (07/13/2014)
-  - added `.random()` clone of `.rnd()`
+  - added `.random()` alias to `.rnd()`
 
 ##### 0.1.1 (06/19/2013)
   - published as a Jam [module](http://jamjs.org/packages/#/details/mersennetwister)
