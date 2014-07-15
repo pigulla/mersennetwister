@@ -37,7 +37,8 @@ var mt = new MersenneTwister(seed); // if no seed is defined, seed randomly
 mt.int();    // random 32-bit integer
 mt.int31();  // random 31-bit integer
     
-mt.rnd();       // random float in the interval [0;1[
+mt.rnd();       // random float in the interval [0;1[ with 32-bit resolution
+mt.random();    // random float in the interval [0;1[ (same as mt.rnd() above)
 mt.rndHiRes();  // random float in the interval [0;1[ with 53-bit resolution
 mt.real();      // random float in the interval [0;1]
 mt.realx();     // random float in the interval ]0;1[
@@ -52,6 +53,9 @@ Take a look at the inventor´s [website](http://www.math.sci.hiroshima-u.ac.jp/~
 As indicated [here](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elicense.html), the Mersenne Twister algorithm is free to be used for any purpose, inclusing commercial use. The license file of this module contains the text found in the [C implementation](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c) on which it is based.
 
 ## Changelog
+##### 0.2.0 (07/13/2014)
+  - added `.random()` alias to `.rnd()`
+
 ##### 0.1.1 (06/19/2013)
   - published as a Jam [module](http://jamjs.org/packages/#/details/mersennetwister)
   - registered as a [Bower](http://bower.io/) component

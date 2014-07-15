@@ -203,6 +203,16 @@
     };
 
     /**
+     * Generates a random real in the interval [0;1[ with 32-bit resolution.
+     * 
+     * Same as .rnd() method - for consistency with Math.random() interface.
+     *
+     * @since 0.2.0
+     * @returns {number}
+     */
+    MersenneTwister.prototype.random = MersenneTwister.prototype.rnd;
+
+    /**
      * Generates a random real in the interval [0;1[ with 53-bit resolution.
      *
      * @since 0.1.0
