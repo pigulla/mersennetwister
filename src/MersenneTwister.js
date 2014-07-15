@@ -207,7 +207,7 @@
      * 
      * Same as .rnd() method - for consistency with Math.random() interface.
      *
-     * @since 0.1.2
+     * @since 0.2.0
      * @returns {number}
      */
     MersenneTwister.prototype.random = MersenneTwister.prototype.rnd;
