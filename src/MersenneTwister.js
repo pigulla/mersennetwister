@@ -10,8 +10,8 @@
     }
 }(this, function () {
     /**
-     * A standalone, pure JavaScript implementation of the Mersenne Twister pseudo random number generator. Compatible with
-     * Node.js, requirejs and browser environments. Packages are available for npm, Jam and Bower.
+     * A standalone, pure JavaScript implementation of the Mersenne Twister pseudo random number generator. Compatible
+     * with Node.js, requirejs and browser environments. Packages are available for npm, Jam and Bower.
      *
      * @module MersenneTwister
      * @author Raphael Pigulla <pigulla@four66.com>
