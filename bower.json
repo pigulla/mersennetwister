@@ -24,6 +24,7 @@
         "examples",
         "package.json",
         "bower.json",
+        "Gruntfile.js",
         "**/.*"
     ]
 }
