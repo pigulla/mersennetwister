@@ -53,6 +53,9 @@ Take a look at the inventor´s [website](http://www.math.sci.hiroshima-u.ac.jp/~
 As indicated [here](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elicense.html), the Mersenne Twister algorithm is free to be used for any purpose, inclusing commercial use. The license file of this module contains the text found in the [C implementation](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c) on which it is based.
 
 ## Changelog
+##### 0.2.1 (10/15/2014)
+  - added bower.json (with ignore section) and .editorconfig
+
 ##### 0.2.0 (07/13/2014)
   - added `.random()` alias to `.rnd()`
 
