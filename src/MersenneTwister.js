@@ -16,7 +16,7 @@
      * @module MersenneTwister
      * @author Raphael Pigulla <pigulla@four66.com>
      * @license See the attached LICENSE file.
-     * @version 0.1.1
+     * @version 0.2.1
      */
 
     /*
@@ -204,7 +204,7 @@
 
     /**
      * Generates a random real in the interval [0;1[ with 32-bit resolution.
-     * 
+     *
      * Same as .rnd() method - for consistency with Math.random() interface.
      *
      * @since 0.2.0
