@@ -31,7 +31,7 @@ module.exports = function (grunt) {
             test: {
                 src: 'src/MersenneTwister.js',
                 options: {
-                    specs: 'tests/MersenneTwister.spec.js',
+                    specs: 'tests/**/*.spec.js',
                     template: require('grunt-template-jasmine-requirejs')
                 }
             }
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', ['jshint', 'jasmine']);
-    
+
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-jsdoc');
