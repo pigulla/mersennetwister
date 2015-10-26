@@ -43,8 +43,8 @@ mt.rndHiRes();  // random float in the interval [0;1[ with 53-bit resolution
 mt.real();      // random float in the interval [0;1]
 mt.realx();     // random float in the interval ]0;1[
     
-mt.init(seed);      // (re)seed the generator with an unsigned 32-bit integer
-mt.initArray(key);  // (re)seed using a state vector of unsigned 32-bit integers
+mt.seed(seed);      // (re)seed the generator with an unsigned 32-bit integer
+mt.seedArray(key);  // (re)seed using a state vector of unsigned 32-bit integers
 ```
 
 Take a look at the inventor´s [website](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html) if more detailed information is required.
