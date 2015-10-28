@@ -1,10 +1,7 @@
 {
     "name": "mersennetwister",
-    "version": "0.2.1",
-    "license": {
-        "type": "Mersenne Twister",
-        "url": "http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c"
-    },
+    "version": "0.2.2",
+    "license": "SEE LICENSE IN LICENSE",
     "author": "Raphael Pigulla <pigulla@four66.com>",
     "contributors": ["Kirby Banman <kirby.banman@gmail.com>"],
     "description": "A standalone, pure JavaScript implementation of the Mersenne Twister pseudo random number generator. Compatible with Node.js, requirejs and browser environments.",
@@ -29,9 +26,9 @@
     },
     "devDependencies": {
         "grunt": "0.4.5",
-        "grunt-contrib-jshint": "0.10.0",
+        "grunt-contrib-jshint": "0.11.3",
         "grunt-contrib-jasmine": "~0.5.3",
         "grunt-template-jasmine-requirejs": "~0.1.10",
-        "grunt-jsdoc": "0.5.7"
+        "grunt-jsdoc": "1.0.0"
     }
 }

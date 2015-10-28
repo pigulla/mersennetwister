@@ -9,7 +9,7 @@ Improvements over Sean's version are
   - compatible with [Node.js](http://nodejs.org/), [requirejs](http://requirejs.org/)  and browser environments
   - available as a module for [npm](https://npmjs.org/), [Jam](http://jamjs.org/) and [Bower](http://bower.io/)
   - (somewhat) unit tested ;-)
- 
+
 Please note that the mersenne twister is [not cryptographically secure](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/efaq.html).
 
 ## Installation and setup
@@ -23,7 +23,7 @@ Use the Jam command line tool: `jam install mersennetwister` and import as usual
 Via the Bower tool: `bower install mersennetwister`
 
 #### requirejs
-Tools like Jam will usually configure requirejs so that it can be accessed via its package name (i.e., `mersennetwister`). If you use requirejs without such a customized configuration you need to import it via its camelcased filename: `requirejs(['MersenneTwister'], function (MersenneTwister) { ...` 
+Tools like Jam will usually configure requirejs so that it can be accessed via its package name (i.e., `mersennetwister`). If you use requirejs without such a customized configuration you need to import it via its camelcased filename: `requirejs(['MersenneTwister'], function (MersenneTwister) { ...`
 
 #### Standalone
 Download and include the `src/MersenneTwister.js` file: `<script src="path/to/MersenneTwister.js"></script>`. It is now available as the global variable `MersenneTwister`.
@@ -36,13 +36,13 @@ var mt = new MersenneTwister(seed); // if no seed is defined, seed randomly
 
 mt.int();    // random 32-bit integer
 mt.int31();  // random 31-bit integer
-    
+
 mt.rnd();       // random float in the interval [0;1[ with 32-bit resolution
 mt.random();    // random float in the interval [0;1[ (same as mt.rnd() above)
 mt.rndHiRes();  // random float in the interval [0;1[ with 53-bit resolution
 mt.real();      // random float in the interval [0;1]
 mt.realx();     // random float in the interval ]0;1[
-    
+
 mt.seed(seed);      // (re)seed the generator with an unsigned 32-bit integer
 mt.seedArray(key);  // (re)seed using a state vector of unsigned 32-bit integers
 ```
@@ -53,6 +53,11 @@ Take a look at the inventor´s [website](http://www.math.sci.hiroshima-u.ac.jp/~
 As indicated [here](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elicense.html), the Mersenne Twister algorithm is free to be used for any purpose, including commercial use. The license file of this module contains the text found in the [C implementation](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c) on which it is based.
 
 ## Changelog
+
+##### 0.2.2 (10/28/2015)
+  - fixed typo readme
+  - fixed license in package.json
+  - bump some dependencies
 
 ##### 0.2.1 (10/16/2014)
   - added bower.json (with ignore section) and .editorconfig
