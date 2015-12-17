@@ -1,7 +1,7 @@
 {
     "name": "mersennetwister",
     "version": "0.2.2",
-    "license": "http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/CODES/mt19937ar.c",
+    "license": "BSD-3-Clause",
     "authors": [
         "Raphael Pigulla <pigulla@four66.com>",
         "Kirby Banman <kirby.banman@gmail.com>"
