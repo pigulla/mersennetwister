@@ -1,7 +1,7 @@
 {
     "name": "mersennetwister",
     "version": "0.2.2",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "BSD-3-Clause",
     "author": "Raphael Pigulla <pigulla@four66.com>",
     "contributors": ["Kirby Banman <kirby.banman@gmail.com>"],
     "description": "A standalone, pure JavaScript implementation of the Mersenne Twister pseudo random number generator. Compatible with Node.js, requirejs and browser environments.",
