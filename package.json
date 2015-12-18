@@ -1,6 +1,6 @@
 {
     "name": "mersennetwister",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "license": "BSD-3-Clause",
     "author": "Raphael Pigulla <pigulla@four66.com>",
     "contributors": ["Kirby Banman <kirby.banman@gmail.com>"],
@@ -29,6 +29,6 @@
         "grunt-contrib-jshint": "0.11.3",
         "grunt-contrib-jasmine": "~0.5.3",
         "grunt-template-jasmine-requirejs": "~0.1.10",
-        "grunt-jsdoc": "1.0.0"
+        "grunt-jsdoc": "1.1.0"
     }
 }

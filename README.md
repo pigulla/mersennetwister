@@ -54,6 +54,9 @@ As indicated [here](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elice
 
 ## Changelog
 
+##### 0.2.3 (12/18/2015)
+  - updated license used to BSD-3-Clause (@sibartlett)
+
 ##### 0.2.2 (10/28/2015)
   - fixed typo readme
   - fixed license in package.json

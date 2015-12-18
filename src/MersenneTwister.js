@@ -16,7 +16,7 @@
      * @module MersenneTwister
      * @author Raphael Pigulla <pigulla@four66.com>
      * @license See the attached LICENSE file.
-     * @version 0.2.2
+     * @version 0.2.3
      */
 
     /*
